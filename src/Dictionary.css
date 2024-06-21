@@ -9,7 +9,7 @@
   background: rgba(175, 234, 237, 0.506);
   padding: 30px;
   border-radius: 6px;
-  box-shadow: 0 10px 10px rgb(0 0 0 /10%);
+  box-shadow: 0 5px 10px rgb(0 0 0 /10%);
   margin: 20px 0;
 }
 .Dictionary .Meaning {
@@ -17,9 +17,12 @@
   padding: 30px;
   border-radius: 6px;
   box-shadow: 0 10px 10px rgb(0 0 0 /10%);
-  margin: 20px 0;
+  margin: 5px 0;
 }
-
+.Dictionary h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 .Dictionary input {
   width: 100%;
   border: 1px solid #d29ae3;
@@ -27,7 +30,8 @@
   padding: 10px;
 }
 .Dictionary .hint {
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 5px;
+  margin-bottom: 20px;
   color: #c327cf;
 }
