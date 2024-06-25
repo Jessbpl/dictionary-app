@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
@@ -8,8 +9,13 @@ export default function Dictionary(props) {
   let [results, setResults] = useState(null);
   //I want to have a boolean to track if the page has been loaded or not. Its going to have a false by default bc the page hasn´t been loaded the first time  that has been rendered. So now we have to create a condition
   let [loaded, setLoaded] = useState(false);
+  let [photos, setPhotos] = useState(null);
+
   function handleResponse(response) {
     setResults(response.data);
+  }
+  function handlePicResponse(response) {
+    setPhotos(response.data.photos);
   }
 
   function search() {
@@ -17,6 +23,9 @@ export default function Dictionary(props) {
     const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyWord}&key=${apiKey}`;
     // console.log(apiUrl);
     axios.get(apiUrl).then(handleResponse);
+
+    const picApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyWord}}&key=${apiKey}`;
+    axios.get(picApiUrl).then(handlePicResponse);
   }
 
   function handleSubmit(event) {
@@ -52,6 +61,7 @@ export default function Dictionary(props) {
         </form>
         <div className="hint">Example: friendship, joke, wish... </div>
         <Results results={results} />
+        <Photos photos={photos} />
       </div>
     );
   } else {

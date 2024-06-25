@@ -1,3 +1,7 @@
+.App {
+  margin: 0 auto;
+  max-width: 960px;
+}
 .App-header {
   background-image: url("books.jpg");
   background-repeat: no-repeat;
