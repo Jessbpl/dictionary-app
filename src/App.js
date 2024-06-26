@@ -10,7 +10,20 @@ export default function App() {
         <main>
           <Dictionary defaultKeyword="friend" />
         </main>
-        <footer className="App-footer">Cooded by Jessica Bravo</footer>
+        <footer className="App-footer">
+          This project has been coded by{" "}
+          <a href="https://github.com/Jessbpl" target="_blank" rel="noreferrer">
+            Jessica Bravo
+          </a>{" "}
+          and is open sourced on{" "}
+          <a
+            href="https://github.com/Jessbpl/dictionary-app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Github
+          </a>
+        </footer>
       </div>
     </div>
   );
