@@ -10,3 +10,15 @@
   padding-right: 10px;
   line-height: 1;
 }
+
+@media (max-width: 573px) {
+  .Synonyms {
+    font-size: 14px;
+    justify-content: center;
+  }
+
+  .Synonyms li {
+    display: flex;
+    padding-right: 5px; /* Reduce padding for smaller screens */
+  }
+}

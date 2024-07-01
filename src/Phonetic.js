@@ -8,7 +8,14 @@ export default function Phonetic(props) {
     return (
       <div className="Phonetic">
         <h2> /{props.phonetic}/ </h2>
-        <ReactAudioPlayer src={url} controls />
+        <p className="audio-player">
+          {" "}
+          <ReactAudioPlayer
+            src={url}
+            controls
+            className="audio-player-element"
+          />
+        </p>
       </div>
     );
   } else {
